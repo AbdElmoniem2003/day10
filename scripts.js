@@ -11,8 +11,11 @@ function ipEnter ()
     input.value = null
 }
 
-
 function deleteLI ( ele )
+{
+    ele.parentElement.remove()
+}
+function deleteRow ( ele )
 {
     ele.parentElement.parentElement.remove()
 }
@@ -23,10 +26,8 @@ function toggleMark ( ele )
 
 
 
-function checkSTD ( ele )
-{
-    ele.parentElement.parentElement.classList.toggle( 'check' )
-}
+
+/* ========================================================================================== */
 
 let form = document.querySelector( 'form' );
 let tableBody = document.querySelector( 'tbody' );
@@ -36,27 +37,29 @@ let course = document.querySelector( 'input#course' );
 let payment = document.querySelector( 'input#payment' );
 let newStd = document.querySelector( '.newStd' );
 
+function checkSTD ( ele )
+{
+    ele.parentElement.parentElement.classList.toggle( 'check' )
+}
+
 form.addEventListener('submit', (ev)=>
 
 {
     event.preventDefault()
     tableBody.innerHTML += `
             <tr>
-                <td>${id.value}</td>
-                <td>${userName.value}</td>
-                <td>${course.value}</td>
-                <td>${payment.value}</td>
+                <td>${ id.value }</td>
+                <td>${ userName.value }</td>
+                <td>${ course.value }</td>
+                <td>${ payment.value }</td>
                 <td>
-                    <button class="del-btn" onclick="deleteLI(this)">delete</button>
+                    <button class="del-btn" onclick="deleteRow(this)">delete</button>
                     <button class="check-btn" onclick="checkSTD(this)">check </button>
 
                 </td>
             </tr>
 
-`
-    id.value = null
-    userName.value = null
-    course.value = null
-    payment.value = null
+`;
+    form.reset()
 })
 

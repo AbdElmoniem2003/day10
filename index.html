@@ -10,10 +10,10 @@
     </head>
 
     <body>
-        <h2>عبد المنعم إبراهيم عبد المنعم عثمان</h2>
-
+        
         <div class="container">
-
+            
+            <h2>عبد المنعم إبراهيم عبد المنعم عثمان</h2>
             <input type="text" id="ip" placeholder="enter" onchange="ipEnter()">
             <button class="add" onclick="ipEnter()">Add</button>
 
@@ -26,10 +26,10 @@
 
 
         <form class="add-student content">
-            <input type="text" id="userID" placeholder="id" onchange="ipEnter()">
-            <input type="text" id="userName" placeholder="name" onchange="ipEnter()">
-            <input type="text" id="course" placeholder="course" onchange="ipEnter()">
-            <input type="text" id="payment" placeholder="payment" onchange="ipEnter()">
+            <input type="text" id="userID" placeholder="id" required>
+            <input type="text" id="userName" placeholder="name" required>
+            <input type="text" id="course" placeholder="course" required>
+            <input type="text" id="payment" placeholder="payment" required>
             <button class="newStd" type="submit">Add New Student</button>
         </form>
         <table>

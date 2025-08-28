@@ -1,6 +1,30 @@
-.check{
-    text-decoration: line-through;
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 1em;
+
+    button{
+        border: none;
+        background-color: rgb(0, 255, 47);
+        border-radius: 1em;
+    }
+
+    input,button.add{
+        padding: 0.5em;
+        border-radius: 1em;
+        width: 25vw;
+        outline: none;
+    }
+    
 }
+
+
+.check{
+    text-decoration: spelling-error;
+    text-shadow: 1px 1px 5px black;
+    font-weight: bold;}
 
 table, td,th{
     padding: 10px;
@@ -27,6 +51,7 @@ form{
 }
 
 form input{
+    width: 33vw;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -39,7 +64,9 @@ form button{
     background-color: rgb(80, 150, 230);
     cursor: pointer;
     display: block;
-    width: 100px;
+    width: 33vw;
+    color: white;
+    box-sizing: content-box;
 }
 
 .del-btn{
