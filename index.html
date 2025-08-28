@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>عبد المنعم إبراهيم عبد المنعم عثمان</title>
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <h2>عبد المنعم إبراهيم عبد المنعم عثمان</h2>
+
+        <div class="container">
+
+            <input type="text" id="ip" placeholder="enter" onchange="ipEnter()">
+            <button class="add" onclick="ipEnter()">Add</button>
+
+            <ol>
+                <li>item 1</li>
+            </ol>
+
+        </div>
+
+
+
+        <form class="add-student content">
+            <input type="text" id="userID" placeholder="id" onchange="ipEnter()">
+            <input type="text" id="userName" placeholder="name" onchange="ipEnter()">
+            <input type="text" id="course" placeholder="course" onchange="ipEnter()">
+            <input type="text" id="payment" placeholder="payment" onchange="ipEnter()">
+            <button class="newStd" type="submit">Add New Student</button>
+        </form>
+        <table>
+            <thead>
+                <th>id</th>
+                <th>name</th>
+                <th>course</th>
+                <th>payment</th>
+                <th>action</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>123</td>
+                    <td>fatma akram</td>
+                    <td>html</td>
+                    <td>300</td>
+                    <td>
+                        <button class="del-btn" onclick="deleteLI(this)">delete</button>
+                        <button class="check-btn" onclick="checkSTD(this)">check </button>
+
+                    </td>
+                </tr>
+            </tbody>
+                
+        </table>
+
+        <script src="./scripts.js"></script>
+    </body>
+
+</html>
